@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            display: flex;
+            flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 1px solid ;
+            
+        }
+        #left{flex: 1;
+            justify-content: center;
+        text-align: center;
+        }
+        input{
+            margin: 10px 0px;
+        }
+        #btn{
+            margin: 10px 0px;
+        }
+        #right{flex:1;
+        border-left: 1px solid #ccc;
+        justify-content: center;
+        text-align: center;}
+        table{ margin:20px;
+            align-items: center;
+            border: 1px solid;
+            border-collapse: collapse;
+            border-radius: 50px;
+        }
+        th,td{
+            border: 1px solid;
+            padding: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="left">
+            <h1>Student Registration</h1>
+            <form id="recordform"  onsubmit="event.preventDefault(); showData();">
+                <input type="text" value="" id="stname" placeholder="Name" required><br />
+                <input type="number" value="" id="age" placeholder="Age" required><br />
+                <input type="email" value="" id="email" placeholder="Email" required><br />
+                <button type="submit" id="btn" > Add record</button>
+             
+                
+
+            </form>
+        </div>
+        <div id="right">
+            <h1>Records</h1>
+            <table>
+                <thead>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                   
+                </thead>
+                <tbody id="tablebody" ></tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        function showData(){
+        let stname=document.querySelector("#stname").value;
+        
+        let age=document.querySelector("#age").value;
+        let mail=document.querySelector("#email").value;
+        let recordlist=document.querySelector("#tablebody");
+        
+            const row=document.createElement('tr');
+            row.innerHTML=`
+            <td>${stname}</td>
+            <td>${age}</td>
+            <td>${mail}</td>`;
+            recordlist.appendChild(row);
+            }
+          
+    </script>
+</body>
+</html>
