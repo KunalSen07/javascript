@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+            color: black;
+        }
+    </style>
+</head>
+<body>hello
+    
+    <script>
+      let A = prompt("Enter the value of SST");
+      let B = prompt("Enter the marks of Drawing");
+      let C = prompt ("Enter the marks of Hindi");
+      let D = prompt("Enter the marks of G.K");
+      let E = prompt("Enter the marks of English");
+      let total = A + B + C +D + E ;
+      let F = total / 500 * 100;
+    
+      console.log("total numbers are " + total);
+      console.log("percentage of student is "+ F+"%") ;
+      if (F<=100 && F>=80) {
+        console.log("students grade is A");
+      }
+      else if(F<=80 && F>=70){
+        console.log("students grade is B");
+      }
+      else if(F<=70 && F>=60){
+        console.log("students grade is C");
+
+      }else if(F<=60 && F>=50){
+        console.log("students grade is D");
+      }
+      else if(F<=50 && F>=40){
+        console.log("students grade is E");
+      }
+      else{
+        console.log("student is Fail");
+      }
+    </script>
+    
+</body>
+</html>
