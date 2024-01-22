@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Digital Clock</title>
+    <style>body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #282c34;
+        color: #61dafb;
+        font-family: 'Arial', sans-serif;
+    }
+    
+    .digital-clock {
+        font-size: 5em;
+    }
+    </style>
+</head>
+<body>
+    <div class="digital-clock" id="digitalClock"></div>
+
+    <script >function updateDigitalClock() {
+        const digitalClock = document.getElementById('digitalClock');
+        const now = new Date();
+    
+        const hours = now.getHours().toString();
+        const minutes = now.getMinutes().toString();
+        const seconds = now.getSeconds().toString();
+    
+        digitalClock.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+    
+    // Update the clock every second
+    setInterval(updateDigitalClock, 1000);
+    
+    // Initial call to set the clock immediately on page load
+    updateDigitalClock();
+    </script>
+</body>
+</html>

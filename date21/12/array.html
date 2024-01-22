@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let marks=[0,1,2,3,4,5,6,7,8,9];
+        document.write(marks+"<br /> "+"<br />"+ marks.length+"<br />");
+        marks.push(11);
+        document.write(marks+ "<br />");
+        marks.pop();
+        document.write(marks+"<br />");
+        marks.unshift(5);
+        document.write(marks+"<br />");
+        marks.shift()
+        document.write(marks+"<br />");
+        let a=marks.indexOf(5
+        );
+        document.write(a+"<br />");
+        let b=marks.includes(5);
+        document.write(b+"<br />");
+        let c=marks.join("and")
+        document.write(c+"<br />");
+        marks.reverse()
+        document.write(marks+"<br />");
+        let words=[15,20,"kunal"];
+        let add=marks.concat(words);
+        document.write(add+"<br />");
+        let sort= ["hello", "welcome","come again"]
+        sort.sort()
+        document.write(sort+"<br />");
+        marks.splice(2,3,5,10,50);
+        document.write(marks);
+       
+    </script>
+</body>
+</html>

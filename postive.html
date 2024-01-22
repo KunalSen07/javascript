@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Information</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName"><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName"><br>
+
+        <input type="button" value="Submit" onclick="displayFormInformation()">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function displayFormInformation() {
+    // Get form values
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+
+    // Display form information on the page
+    var resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = "First Name: " + firstName + "<br>Last Name: " + lastName;
+}
+
+
+    </script>
+</body>
+</html>

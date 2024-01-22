@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(88, 12, 12);
+            color:aliceblue;
+           display: flex;
+        
+           justify-content: center;
+     
+      
+           
+        }
+        table{
+            text-align:center;
+            background-color: rgb(149, 53, 53);
+            border-radius: 10px;
+            border-collapse: collapse;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <table border="5px"
+    style="width: auto;">
+        <thead>
+        <tr>
+            <th>Product name</th>
+            <th>Product id</th>
+            <th>Price</th>
+            <th>discriptipn</th>
+            <th>Image of product</th>
+        </tr> 
+    </thead>
+    <tbody id="productDetails"></tbody>
+ </table>
+    <script>
+    let product=[
+        {"Productname":"Phone","id":"Phone123","prize":10000,"discription":"Phone","image":"DSC_0083.JPG"},
+        {"Productname":"Tab","id":"Tab123","prize":30000,"discription":"Tab", "image":"image.jpg"},
+        {"Productname":"Laptop","id":"Laptop123","prize":100000,"discription":"Laptop", "image":"image.jpg"},
+        {"Productname":"Earphone","id":"Earphone123","prize":1000,"discription":"Earphone", "image":"image.jpg"},
+        {"Productname":"notebook","id":"Notebook123","prize":100,"discription":"Notebook", "image":"image.jpg"},
+        ]
+        function tableRow(product){
+            return `
+            <tr>
+        <td>${product.Productname}</td>
+        <td>${product.id}</td>
+        <td>${product.prize}</td>
+        <td>${product.discription}</td>
+        <td><img src="${product.image}" alt="${product.Productname}" style=" width:50px; height:50px;"></td>
+        </tr>`;
+        }
+        //using map to join product with table
+        let newTable= product.map(tableRow).join('');
+//now we have to print it
+document.getElementById("productDetails").innerHTML=newTable;
+        </script>
+</body>
+</html>

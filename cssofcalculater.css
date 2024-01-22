@@ -1,0 +1,58 @@
+*{
+margin: 0;
+padding: 0;
+}
+body{
+    background-color: rgb(43, 43, 92);
+    margin-top: 150px;
+  text-align: center;
+  font-size: x-large;
+}
+
+
+#div1{
+    margin: 50;
+    font-size: x-large;
+    background-color: grey;
+}
+#div2{
+    margin: 10px;
+    background-color: grey;
+    font-size: larger;
+    box-shadow: rgb(90, 73, 73);
+}
+#div2 .btn{
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(69, 69, 90);
+}
+#resultbtn{
+    padding: 5px;
+    background-color: grey;
+}
+.number{
+    margin: 10px;
+    padding: 10px;
+    background-color: grey;
+}
+#calnum{
+    display: inline-;
+}
+#num1:hover{
+    background-color: rgb(186, 148, 148);
+  
+}
+#num2:hover{
+    background-color: rgb(186, 148, 148);
+  
+}
+#result:hover{
+    background-color: rgb(186, 148, 148);
+  
+}
+.number:hover{
+    background-color: rgb(108, 106, 106);
+}
+.btn:hover{
+    background-color:rgb(56, 56, 79) ;
+}

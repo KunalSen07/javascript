@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: rgb(147, 137, 137);
+            color: wheat;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input{
+            margin: 10px;
+        }
+        button{
+            padding: 4px 9px;
+            margin-bottom: 5px;
+        }
+        button:hover{
+            background-color: rgb(185, 176, 164);
+            
+        }
+        div{
+            margin-top: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+<h1>Student Information Form</h1>
+
+<form>
+    <label for="name">Student's name:</label>
+    <input id="stname" type="text" name="name" value="" /><br/>
+    <label for="math">Math number:</label>
+    <input id="math" type="text" name="math" value="" /><br />
+    <label for="sci">Science number:</label>
+    <input id="sci" type="text" name="sci" value="" /><br />
+    <label for="draw">Drawing name:</label>
+    <input id="draw" type="text" name="draw" value="" /><br />
+    <label for="hindi">Hindi marks:</label>
+    <input id="hindi" type="text" name="hindi" value="" /><br /><br/>
+    <button type="button" onclick="calculate()">calculater</button>
+    <hr/>
+    </form>
+    <div>Name:<span id="name1"></span></div><br />
+    <div> Total: <span id="total" > </span></div><br />
+    <div> Average: <span id="average" ></span></div><br />
+    <div> Result: <span id="result" ></span></div><br />
+    <div> Grade: <span id="grade" ></span></div><br />
+    <script>
+        function calculate(){
+var name2= document.querySelector("#stname").value;
+var math=Number(document.querySelector("#math").value);
+var sci=Number(document.querySelector("#sci").value);
+var draw=Number(document.querySelector("#draw").value);
+var hindi=Number(document.querySelector("#hindi").value);
+
+var total=math+sci+draw+hindi;
+var Average=total/4;
+var result = (average>=50) ? "pass" : "fail";
+var grade;
+if (Average>=90){
+    grade="A"
+}else if (Average>=80){
+    grade="B"
+}else if (Average>=70){
+    grade="c"
+}else if (Average>=60){
+    grade="d"
+}else if (average>=50){
+    grade="e"
+}else{
+    grade="f"
+}
+document.querySelector("#total").innerText=total;
+document.querySelector("#average").innerText=Average.toFixed(2);
+document.querySelector("#result").innerText=result;
+document.querySelector("#grade").innerText=grade;
+document.querySelector("#name1").innerText=name2;
+        }
+    </script>
+</body>
+</html>

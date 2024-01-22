@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            display: inline-flex;
+            padding: 50px;
+            justify-content: center;
+            margin: 50px 50px;
+            cursor: pointer ;
+
+        }
+        #blue{
+            background-color: blue;
+        }
+        #pink{
+            background-color: pink;
+        }
+        #red{
+            background-color: red;
+        }
+        #green{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <button id="blue" onclick="blue()">Blue</button>
+    <button id="pink" onclick="pink()">pink</button>
+    <button id="red" onclick="red()">red</button>
+    <button id="green" onclick="green()">green</button>
+    <script>
+        function blue(){
+            var body= document.body;
+            body.style.backgroundColor='blue'; 
+        }
+        function pink(){
+            var body= document.body;
+            body.style.backgroundColor='pink'; 
+        }
+        function red(){
+            var body= document.body;
+            body.style.backgroundColor='red'; 
+        }
+        function green(){
+            var body= document.body;
+            body.style.backgroundColor='green'; 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:brown;
+            color:aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="num1" id="num1" value="" />
+<input type="text" name="num2" id="num2" value="" />
+<p>Result<input type="text" value="" id="res"></p>
+<button onclick="getSum()">Add Data</button>
+   <script>function getSum(){
+    var num1=Number(document.querySelector("#num1").value)
+    var num2=Number(document.querySelector("#num2").value)
+    alert(num2)
+    var sum=num1+num2;
+    alert(sum)
+    document.getElementById("res").value=sum
+}
+    </script>
+</body>
+</html>

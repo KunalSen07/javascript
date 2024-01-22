@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mainFunction(callback){
+        console.log("preforming operation")
+        setTimeout(function(){
+        callback("operation complete");},1000);
+        }
+     function callbackfunction(result){
+        console.log("result:"+ result);
+
+     }
+     mainFunction(callbackfunction);
+    
+    </script>
+</body>
+</html>
